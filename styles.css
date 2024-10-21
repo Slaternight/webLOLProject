@@ -1,0 +1,263 @@
+/* Reseteo básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Estilos para el menú */
+header {
+    background-color: #333;
+    padding: 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+    color: #f0a500;
+}
+
+/* Estilos para el banner */
+.banner {
+    /*background-color: #f0a500;*/
+    color: #f0a500;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+    background-color: rgb(10, 20, 40);
+
+}
+
+.banner img{
+    width: 100%;
+}
+
+/* Estilos para la galería */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+ 
+}
+
+.letras{
+    width: 100%;
+    justify-content: center;
+}
+
+.letras marquee{
+    color: #f0a500;
+    background-color: rgb(10, 20, 40);
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.grid-item {
+    text-align: center;
+    margin: 0px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 0px;
+    transition: transform 0.7s;
+
+}
+
+.grid-item img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.7s;
+}
+
+.grid-item p {
+    margin: -8px 0px 0px 0px;
+    font-size: 1rem;
+    background-color: rgb(10, 20, 40);
+    color: rgb(255, 255, 255);
+    word-break: break-word;
+    font-family: "Beaufort for LOL", sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    padding: 10px 16px;
+    overflow: hidden;
+    white-space: normal;
+    z-index: 100;
+}
+
+.grid-item p:hover{
+    transform: scale(1.1);
+    transition: transform 0.7s;
+    background-color: rgb(59, 67, 83);
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.grid-item a{
+    text-decoration: none;
+}
+
+/* Estilos para el footer */
+/* footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+} */
+
+/* Footer más completo */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: left;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 1rem 0;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #f0a500;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    color: #f0a500;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para los iconos de redes sociales */
+.social-icons a {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+/* Estilo para la parte inferior (copyright) */
+.footer-bottom {
+    background-color: #222;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Estilos responsive */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 1rem auto;
+    }
+
+    .social-icons a {
+        margin: 0.5rem;
+    }
+}
+
+
+/* Estilos responsive */
+@media (max-width: 1200px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
